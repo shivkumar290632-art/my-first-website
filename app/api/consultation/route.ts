@@ -1,7 +1,7 @@
 import { and, eq, gt } from "drizzle-orm";
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
-import { getDb } from "../../../db";
+import { getDb } from "@/db";
 import { consultationRequests } from "../../../db/schema";
 
 const schema = z.object({

@@ -2,6 +2,20 @@
 
 A clean full-stack starter running on [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and Drizzle support.
 
+## Deploy on Vercel
+
+Import the GitHub repository using the directory that contains this README and
+`package.json` as the project root. Use the Next.js framework preset and leave
+the output directory at its default. The checked-in `vercel.json` selects the
+native Next.js build.
+
+For consultation submissions, apply the SQL migration in `drizzle/` to your
+Cloudflare D1 database if it has not already been applied. In Vercel, set
+`CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_D1_DATABASE_ID`, and
+`CLOUDFLARE_D1_API_TOKEN` for each deployment environment that should accept
+submissions. The token needs D1 Write permission for the account. Redeploy
+after saving the variables. The public pages can build without these values.
+
 ## Prerequisites
 
 - Node.js `>=22.13.0`

@@ -1,0 +1,10 @@
+import type { Metadata } from "next";
+import { CircleCheck } from "lucide-react";
+import { CTA, Eyebrow } from "../components/shared";
+import { reasons } from "../lib/marketing-copy";
+
+export const metadata: Metadata = { title: "About Shiv Kumar", description: "Helping small businesses grow smarter in the digital world with proven digital marketing strategies and AI-powered tools." };
+export default function AboutPage() { return <main id="main-content">
+  <section className="page-hero"><div className="shell"><Eyebrow>About me</Eyebrow><h1>Helping Small Businesses Grow Smarter <em>in the Digital World.</em></h1><p>Hi, I'm Shiv Kumar, an AI Marketing Expert.</p></div></section>
+  <section className="section"><div className="shell story-grid"><div className="about-photo"><img src="/shiv-kumar.jpeg" alt="Shiv Kumar, AI marketing expert" width="898" height="888" loading="lazy" /></div><div><h2>Marketing shouldn't become another burden.</h2><p>I help small business owners overcome marketing challenges using proven digital marketing strategies and AI-powered tools.</p><p>I understand that running a business takes time, effort, and money. Marketing shouldn't become another burden.</p><p>That's why I'm passionate about making digital marketing simpler, smarter, and more accessible for small businesses.</p><p><strong>My mission is to help your business get noticed, attract more customers, and create more opportunities for growth.</strong></p></div></div></section>
+  <section className="section section-cream"><div className="shell"><div className="section-heading centered"><Eyebrow>Why choose me</Eyebrow><h2>Smart Marketing That Focuses on Your Business Growth.</h2><p>You don't need complicated strategies or expensive tools. You need the right marketing approach for your business.</p><p>Here's what you can expect:</p></div><div className="expect-grid">{reasons.map(([title, text]) => <article key={title}><span><CircleCheck /></span><h3>{title}</h3><p>{text}</p></article>)}</div><p className="section-closing centered">My goal is simple: Make digital marketing easier and more effective for your business.</p></div></section><CTA /></main>; }
